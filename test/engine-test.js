@@ -328,6 +328,7 @@ sources.forEach(function (source) {describe('sc.' + source[0].name + '()', funct
         });
 
         it('run distributed, pre-persist', function (done) {
+          this.timeout(5000);
           var src_args, src2_args, transform_args, action_args, action2_args, da, other;
           switch (source[0].name) {
           case 'lineStream':
